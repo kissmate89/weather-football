@@ -40,7 +40,7 @@ Spend the time to find a clean way to solve the tasks, we just want to see how m
 3. Minimum temperature at the moment 
 4. Maximum temperature at the moment
 
-Default is Kelvin, but we love Celsius so can you change the measurement please.  We're interested to see some of your styling skills so please use this challenge to showcase it!
+Default is Kelvin, but we love Celsius so can you change the measurement please.  We're interested to see some of your styling skills so please use this challenge to showcase them!
 
 
 ## One Question Quiz
