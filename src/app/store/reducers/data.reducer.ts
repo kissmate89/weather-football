@@ -28,21 +28,21 @@ export function dataReducer(state: DataState = initialState, action: Action): Da
 
       switch (response.id) {
         case APP_DATA.LONDON_ID: {
-          return { ...state, weatherLondon: response }
+          return { ...state, weatherLondon: response };
         }
         case APP_DATA.BRISTOL_ID: {
-          return { ...state, weatherBristol: response }
+          return { ...state, weatherBristol: response };
         }
         case APP_DATA.ROME_ID: {
-          return { ...state, weatherRome: response }
+          return { ...state, weatherRome: response };
         }
       }
     }
 
     case DataActionTypes.FETCH_FOOTBALLERS_SUCCESS: {
       const { response } = <dataFetchFootballersSuccess>action;
-      const coach = response.find(i => i.role === 'COACH')
-      return { ...state, footballers: response.filter(i => i.role !== 'COACH'), footballCoach: coach }
+      const coach = response.find(i => i.role === 'COACH');
+      return { ...state, footballers: response.filter(i => i.role !== 'COACH'), footballCoach: coach };
     }
 
     default: return state;

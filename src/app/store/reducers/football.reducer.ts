@@ -26,27 +26,27 @@ export function footballReducer(state: FootballState = initialState, action: Act
       switch (footballer.position) {
         case 'Midfielder': {
           if (state.midfielders.some(i => i.id === footballer.id)) {
-            return { ...state, midfielders: [...state.midfielders.filter(i => i.id !== footballer.id)] }
+            return { ...state, midfielders: [...state.midfielders.filter(i => i.id !== footballer.id)] };
           } else {
-            return { ...state, midfielders: state.midfielders.concat(footballer) }
+            return { ...state, midfielders: state.midfielders.concat(footballer) };
           }
         }
         case 'Defender': {
           if (state.defenders.some(i => i.id === footballer.id)) {
-            return { ...state, defenders: [...state.defenders.filter(i => i.id !== footballer.id)] }
+            return { ...state, defenders: [...state.defenders.filter(i => i.id !== footballer.id)] };
           } else {
-            return { ...state, defenders: state.defenders.concat(footballer) }
+            return { ...state, defenders: state.defenders.concat(footballer) };
           }
         }
         case 'Attacker': {
           if (state.attackers.some(i => i.id === footballer.id)) {
-            return { ...state, attackers: [...state.attackers.filter(i => i.id !== footballer.id)] }
+            return { ...state, attackers: [...state.attackers.filter(i => i.id !== footballer.id)] };
           } else {
-            return { ...state, attackers: state.attackers.concat(footballer) }
+            return { ...state, attackers: state.attackers.concat(footballer) };
           }
         }
         case 'Goalkeeper': {
-          return { ...state, goalKeeper: footballer }
+          return { ...state, goalKeeper: footballer };
         }
       }
 

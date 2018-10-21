@@ -9,6 +9,4 @@ import { Weather } from 'src/app/models/weather.model';
 export class WeatherItemComponent {
   @Input('weatherData') weatherData: Weather;
 
-  constructor() { }
-
 }

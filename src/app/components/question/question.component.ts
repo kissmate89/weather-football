@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { QuestionStages } from '../../models/question-page.model'
@@ -7,18 +7,13 @@ import { QuestionStages } from '../../models/question-page.model'
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss']
 })
-export class QuestionComponent implements OnInit {
+export class QuestionComponent {
   capitalForm = new FormGroup({
     answer: new FormControl('', Validators.required)
-  })
+  });
 
   currentStage: QuestionStages = 0;
-  rightAnswer = "rome"
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  rightAnswer = 'rome';
 
   onSubmit() {
     this.currentStage = this.capitalForm.value.answer.toLowerCase() === this.rightAnswer ? QuestionStages.Right : QuestionStages.Wrong;
