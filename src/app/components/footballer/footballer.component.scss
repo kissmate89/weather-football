@@ -1,0 +1,13 @@
+.footballer-container {
+  cursor: pointer;
+  background-color: #4ABDAC;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  h4, ul {
+    margin: 0;
+  }
+}
+.footballer-container.active {
+  background-color: #FC4A1A;
+}

@@ -1,0 +1,30 @@
+<div class="football-component-container">
+  <h2>You are {{(footballCoach$ | async)?.name}}, the team's coach.</h2>
+  <h3>You can create your own Borussia Mönchengladbach starting eleven!</h3>
+  <div>
+    <h5>Goalkeeper:</h5>
+    <ul *ngIf="(goalKeeper$ | async)">
+      <li>{{(goalKeeper$ | async)?.name}}</li>
+    </ul>
+
+    <h5>Defenders:</h5>
+    <ul>
+      <li *ngFor="let defender of (defenders$ | async)">{{defender?.name}}</li>
+    </ul>
+
+    <h5>Midfielders:</h5>
+    <ul>
+      <li *ngFor="let midfielder of (midfielders$ | async)">{{midfielder?.name}}</li>
+    </ul>
+
+    <h5>Attackers:</h5>
+    <ul>
+      <li *ngFor="let attacker of (attackers$ | async)">{{attacker?.name}}</li>
+    </ul>
+  </div>
+  <div class="footballers-container">
+    <app-footballer [footballerData]="footballer" [selectedIds]="selectedOnes$ | async" (footballerClicked)="footballerSelected($event)"
+      *ngFor="let footballer of (footballers$ | async)"></app-footballer>
+  </div>
+
+</div>

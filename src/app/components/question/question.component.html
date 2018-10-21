@@ -1,0 +1,21 @@
+<div [ngSwitch]="currentStage" class="question-component-container">
+  <div *ngSwitchCase="0" class="form-container">
+    <h2>What is the capital of Italy?</h2>
+
+    <form [formGroup]="capitalForm" (ngSubmit)="onSubmit()">
+      <label> Please type your answer here:
+        <input type="text" formControlName="answer">
+      </label>
+      <button type="submit" [disabled]="!capitalForm.valid">Let's check!</button>
+    </form>
+
+  </div>
+  <div *ngSwitchCase="1" class="feedback-container right">
+    <h2 class="feedback-text">Right Answer</h2>
+    <button class="feedback-btn" (click)="goBack()">Back</button>
+  </div>
+  <div *ngSwitchCase="2" class="feedback-container wrong">
+    <h2 class="feedback-text">Wrong Answer</h2>
+    <button class="feedback-btn" (click)="goBack()">Back</button>
+  </div>
+</div>

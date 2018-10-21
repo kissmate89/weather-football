@@ -1,0 +1,10 @@
+.football-component-container {
+  margin-top: 20px;
+  ul, h4, h5 {
+    margin: 0;
+  }
+}
+.footballers-container {
+  display: flex;
+  flex-wrap: wrap;
+}

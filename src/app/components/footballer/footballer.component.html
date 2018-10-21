@@ -1,0 +1,8 @@
+<div class="footballer-container" [ngClass]="{'active' : selected}" (click)="footballerSelected()">
+  <h4>{{footballerData?.name}}</h4>
+  <ul>
+    <li>Position: {{footballerData?.position}}</li>
+    <li>Age: {{footballerData?.dateOfBirth | footballerAge}}</li>
+    <li>{{footballerData?.nationality}}</li>
+  </ul>
+</div>

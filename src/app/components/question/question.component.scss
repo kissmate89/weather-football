@@ -1,0 +1,53 @@
+.question-component-container {
+  button {
+    cursor: pointer;
+    margin: auto;
+    width: fit-content;
+    background-color: #F7B733;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    &:hover, &:focus {
+      background-color: #4ABDAC;
+      color: #efefef;
+    }
+    &:disabled {
+      cursor: initial;
+      background-color: #DFDCE3;
+      color: rgba(0,0,0,0.6);
+    }
+  }
+}
+
+.form-container, .feedback-container {
+  padding: 5px 5px 15px 5px;
+  margin-top: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.form-container {
+  background-color: #FC4A1A;
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      padding: 3px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      border-style: unset;
+      border-radius: 3px;
+    }
+  }
+}
+
+.feedback-container {
+  &.right {
+    background-color: #4ABDAC;
+  }
+  &.wrong {
+    background-color: #FC4A1A;
+  }
+}
+
+

@@ -1,0 +1,9 @@
+<div class="weather-item-container">
+  <h3>{{weatherData?.name || null}}</h3>
+  <ul>
+    <li>Temperature: {{weatherData?.main.temp}}&#8451;</li>
+    <li>Humidity: {{weatherData?.main.humidity}}</li>
+    <li>Max temperature: {{weatherData?.main.temp_max}}&#8451;</li>
+    <li>Min temperature: {{weatherData?.main.temp_min}}&#8451;</li>
+  </ul>
+</div>
